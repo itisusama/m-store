@@ -35,17 +35,21 @@ const Card = () => {
                     {/* Name */}
                     <div className="w-[250px] flex items-center justify-center">
                         <p className="p-3 bg-slate-100 text-center w-fit mt-[-10%]">
-                            <span>{
+                            {
                              peopleData[index] && (
-                                 <h1>{peopleData[index].first_name} {peopleData[index].last_name}</h1>
+                                 <span>{peopleData[index].first_name} {peopleData[index].last_name}</span>
                              )
-                         }</span>
+                         }
                         </p>
                     </div>
 
                     <div className="w-[250px] flex items-center justify-center">
                         <p className="p-3 bg-[#f5cd4c] text-center w-fit rotate-6">
-                            <span>541-124-587</span>
+                        {
+                             peopleData[index] && (
+                                 <span>{peopleData[index].phone}</span>
+                             )
+                         }  
                         </p>
                     </div>
                 </section>
