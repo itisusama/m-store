@@ -8,7 +8,7 @@ import Products from "./pages/Products";
 
 export default function App() {
   return (
-    < >
+    <div>
       <Router>
         <Navbar />
           <Routes>
@@ -17,6 +17,6 @@ export default function App() {
           </Routes>
         <Footer/>
     </Router>
-    </>
+    </div>
   )
 }

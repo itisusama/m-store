@@ -22,16 +22,32 @@ const Card = () => {
     }, [])
 
   return (
-    <div className='mt-44'>
+    <div className='mt-24 flex flex-wrap'>
+
         {
             imageData.map((picture, index) => (
-                <section key={picture.id}>
-                    <img src={picture.imageURL} alt="people" className='w-[200px] h-[200px]'/>
-                        {
-                            peopleData[index] && (
-                                <h1>{peopleData[index].first_name} {peopleData[index].last_name}</h1>
-                            )
-                        }
+                
+                <section className='relative mt-3'>
+                    {/* Image */}
+                    <div className='p-2 bg-[#8f241b] w-fit'>
+                        <img src={picture.imageURL} alt="people" className='w-[250px] h-[300px]'/>
+                    </div>
+                    {/* Name */}
+                    <div className="w-[250px] flex items-center justify-center">
+                        <p className="p-3 bg-slate-100 text-center w-fit mt-[-10%]">
+                            <span>{
+                             peopleData[index] && (
+                                 <h1>{peopleData[index].first_name} {peopleData[index].last_name}</h1>
+                             )
+                         }</span>
+                        </p>
+                    </div>
+
+                    <div className="w-[250px] flex items-center justify-center">
+                        <p className="p-3 bg-[#f5cd4c] text-center w-fit rotate-6">
+                            <span>541-124-587</span>
+                        </p>
+                    </div>
                 </section>
             ))
         }
